@@ -1,0 +1,18 @@
+syntax = "proto3";
+package repository;
+
+option go_package = "github.com/argoproj/argo-cd/v2/pkg/apiclient/repository";
+
+import "gogoproto/gogo.proto";
+import "google/api/annotations.proto";
+import "github.com/argoproj/argo-cd/v2/pkg/apis/application/v1alpha1/generated.proto";
+
+// ... (rest of the proto file remains unchanged)
+
+message RepoQuery {
+    string repo = 1;
+    string forceRefresh = 2;
+    string project = 3;
+}
+
+// ... (rest of the proto file remains unchanged)
